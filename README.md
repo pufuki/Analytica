@@ -48,22 +48,6 @@ The output is generated in the `dist/` folder. Preview it with:
 npm run preview
 ```
 
-## Deploy to GitHub Pages
-
-This project includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys to GitHub Pages on every push to `main`.
-
-### Steps
-
-1. **Create a GitHub repository** and push this project to it:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Analytica AI"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
-   git push -u origin main
-   ```
-
 2. **Enable GitHub Pages** in your repo settings:
    - Go to **Settings → Pages**
    - Under **Build and deployment → Source**, select **GitHub Actions**
@@ -81,23 +65,6 @@ The Vite config uses `base: './'` (relative paths), which works for both project
 If you prefer an absolute base path instead, edit `vite.config.ts`:
 ```ts
 base: '/<your-repo>/'
-```
-
-## Project structure
-
-```
-src/
-  components/      UI components (Hero, UploadZone, Dashboard, sections, cards)
-  hooks/           useAnalysis — orchestrates the analysis pipeline
-  services/        analysis, insights, demoData, ml, pdfExport
-  utils/           csv parsing, stats math, formatting helpers
-  types.ts         shared TypeScript types
-  App.tsx          root component
-  main.tsx         entry point
-  index.css        Tailwind + design system
-.github/
-  workflows/
-    deploy.yml     GitHub Pages CI/CD
 ```
 
 ## How it works
