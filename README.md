@@ -48,25 +48,6 @@ The output is generated in the `dist/` folder. Preview it with:
 npm run preview
 ```
 
-2. **Enable GitHub Pages** in your repo settings:
-   - Go to **Settings → Pages**
-   - Under **Build and deployment → Source**, select **GitHub Actions**
-   - (The included workflow handles the rest automatically.)
-
-3. Wait for the **Deploy to GitHub Pages** action to finish (check the **Actions** tab). Once complete, your app will be live at:
-   ```
-   https://<your-username>.github.io/<your-repo>/
-   ```
-
-### Notes on the `base` path
-
-The Vite config uses `base: './'` (relative paths), which works for both project sites (`/<repo>/`) and user/org sites (`/`). If you rename the repo or deploy to a custom domain, no change is needed.
-
-If you prefer an absolute base path instead, edit `vite.config.ts`:
-```ts
-base: '/<your-repo>/'
-```
-
 ## How it works
 
 1. You upload a CSV (or pick a demo dataset).
